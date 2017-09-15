@@ -3,7 +3,9 @@
 
 ### Install
 
-This project requires **Python 2.7** and the following Python libraries installed:
+This project is an exercise from MLND from Udacity.
+
+Requires **Python 2.7** and the following Python libraries installed:
 
 - [NumPy](http://www.numpy.org/)
 - [Pandas](http://pandas.pydata.org)
