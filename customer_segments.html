@@ -21890,7 +21890,8 @@ While the first two points are associated with cluster 1 (segment 1), the last o
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-Changing the delivery service from 5 to 3 days a week will result in different reactions across customers. The ones that need a bigger volume of fresh products, like cafes and restaurants will be the ones that will complain most, because a fresh product that is delivered only after two days is not fresh anymore. The ones that might react positively to the change (or less negatively) are the retailers. Their core business doesn't depend strictly of those fresh products.</p>
+I think that changing the delivery service from 5 to 3 days a week will result in different reactions across customers. The ones that need a bigger volume of fresh products, like cafes and restaurants will be the ones that will complain most, because a fresh product that is delivered only after two days is not fresh anymore. The ones that might react positively to the change (or less negatively) are the retailers. Their core business doesn't depend strictly of those fresh products.
+To verify this, we can implement an A/B test. We have 2 clusters, so we can assume we have two types of customers. For each type, we want to know if customers are positively or negatively affected by the change. To implement the test, we should divide each clusters in two groups, A and B, so we would end up with four groups in total, 2 for each cluster. For all customers in A groups, we would maintain the 5 days a week delivery, while for all customers in B groups the delivery would be 3 times a week. After some time, we could analise the impact in customer satisfaction. Implementing this tests, we should be able to know, for each cluster, if the changes in the delivery affect or not customer satisfaction, and if it does, if the change is viewed as positive or not.</p>
 
 </div>
 </div>
