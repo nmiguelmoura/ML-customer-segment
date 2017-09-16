@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>customer_segments</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>customer_segments</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11841,9 +11814,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>   Fresh  Milk  Grocery  Frozen  Detergents_Paper  Delicatessen
 0  12669  9656     7561     214              2674          1338
@@ -11888,9 +11859,7 @@ Wholesale customers dataset has 440 samples with 6 features each.
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -12035,18 +12004,14 @@ Wholesale customers dataset has 440 samples with 6 features each.
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Chosen samples of wholesale customers dataset:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -12245,9 +12210,7 @@ The last sample buys fresh products well above the mean, which might represent a
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The score for removed feature Fresh is:
 -0.379170072447
@@ -12333,9 +12296,7 @@ I attempted to predict the fresh products, and obtained a negative score of -0.3
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/Nuno/anaconda2/lib/python2.7/site-packages/ipykernel_launcher.py:2: FutureWarning: pandas.scatter_matrix is deprecated. Use pandas.plotting.scatter_matrix instead
   
@@ -12343,9 +12304,7 @@ I attempted to predict the fresh products, and obtained a negative score of -0.3
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                     Fresh      Milk   Grocery    Frozen  Detergents_Paper  \
 Fresh             1.000000  0.100510 -0.011854  0.345881         -0.101953   
@@ -12366,9 +12325,7 @@ Delicatessen          1.000000
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt output_prompt">Out[58]:</div>
-
+<div class="output_area"><div class="prompt output_prompt">Out[58]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12377,9 +12334,7 @@ Delicatessen          1.000000
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14241,9 +14196,7 @@ In case of 'Fresh', the feature I attempted to predict, we can see there is no c
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/Nuno/anaconda2/lib/python2.7/site-packages/ipykernel_launcher.py:8: FutureWarning: pandas.scatter_matrix is deprecated. Use pandas.plotting.scatter_matrix instead
   
@@ -14251,9 +14204,7 @@ In case of 'Fresh', the feature I attempted to predict, we can see there is no c
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -18317,9 +18268,7 @@ UOvgAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -18465,18 +18414,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Fresh&#39;:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -18657,18 +18602,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Milk&#39;:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -18741,18 +18682,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Grocery&#39;:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -18807,18 +18744,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Frozen&#39;:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -18945,18 +18878,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19011,18 +18940,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Delicatessen&#39;:
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19185,9 +19110,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>#### Outliers ####
 {128: 2, 193: 1, 264: 1, 137: 1, 142: 1, 145: 1, 154: 3, 412: 1, 285: 1, 161: 1, 420: 1, 38: 1, 171: 1, 429: 1, 175: 1, 304: 1, 305: 1, 439: 1, 184: 1, 57: 1, 187: 1, 65: 2, 66: 2, 203: 1, 325: 1, 289: 1, 75: 2, 81: 1, 338: 1, 86: 1, 343: 1, 218: 1, 95: 1, 96: 1, 353: 1, 98: 1, 355: 1, 356: 1, 357: 1, 233: 1, 109: 1, 183: 1}
@@ -19281,9 +19204,7 @@ About K-means, I think the center will not be much affected by these outliers if
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Variance ratio:
 [ 0.44302505  0.26379218  0.1230638   0.10120908  0.04850196  0.02040793]
@@ -19296,9 +19217,7 @@ About K-means, I think the center will not be much affected by these outliers if
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -19628,9 +19547,10 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 <p><strong>Answer:</strong>
 The first and second components explain about 71% of the variance in the data. The first principal component alone explains about 44% of the variance in this data.</p>
 <ul>
-<li>The first dimension represents essentially the features 'Milk', 'Grocery' and 'Detergents_paper', being this last one responsible for most of the variance in this dimension;</li>
-<li>The second dimension represents essentially the variance along the features 'Fresh', 'Frozen' and 'Delicatessen';</li>
-<li>The third dimension represents the variance along 'Fresh', 'Frozen' and 'delicatessen'.</li>
+<li>The first dimension represents essentially the features 'Milk', 'Grocery' and 'Detergents_paper', being this last one responsible for most of the variance in this dimension. Customers with a large negative value in this dimension are essentially buying more of 'Milk', 'Grocery' and 'Detergents_paper' and less from 'Fresh' and 'Frozen'. In these customers are included the ones from sample points 0 and 1.</li>
+<li>The second dimension represents essentially the variance along the features 'Fresh', 'Frozen' and 'Delicatessen'. Here, all features have negative weights, so customers with negative values in this dimension are likely to buy more of 'Fresh', 'Frozen' and 'Delicatessen', like sample data point 2. Customers with a positive value buy less of these features;</li>
+<li>The third dimension represents essentially the variance along 'Fresh', 'Frozen' and 'Delicatessen' In this case, a customer with a highly positive value in this dimension is likely to buy more from 'Delicatessen' and 'Frozen', and less from 'Fresh' and 'Detergents_paper' (sample point 1). Customers with a highly negative value are expected to buy more from 'Fresh' and 'Detergents_paper' and less from 'Delicatessen' and 'Frozen' (sample point 0). There is an inverse relationship between 'Delicatessen' and 'Frozen' in one hand and 'Fresh' and 'Detergents_paper' in the other.</li>
+<li>The fourth dimension represents essentially the variance along 'Frozen' and 'Delicatessen'. There is an inverse relationship between these two features in these dimension, menaing that a customer with a highly positive value is expected to buy more 'Frozen' and less 'Delicatessen', while a customer with a large negative value is likely to buy more from 'Delicatessen' and less from 'Frozen' (sample point 0).</li>
 </ul>
 <p>In the first two dimensions is well represented the variance of the 6 features that constitute this dataset, so the data might be reduced to these two dimensions.</p>
 
@@ -19664,9 +19584,7 @@ The first and second components explain about 71% of the variance in the data. T
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19800,9 +19718,7 @@ The first and second components explain about 71% of the variance in the data. T
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19882,9 +19798,7 @@ The first and second components explain about 71% of the variance in the data. T
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt output_prompt">Out[73]:</div>
-
+<div class="output_area"><div class="prompt output_prompt">Out[73]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -19893,9 +19807,7 @@ The first and second components explain about 71% of the variance in the data. T
 
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -20974,7 +20886,7 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 <p><strong>Answer:</strong>
 K-Means is a simple and fast algorithm that reduces the data to the nearest centroids. Thats great to just split the datapoints in categories, restaurants vs retailers, for instances. It also turns out to be very easy to interpret the results.</p>
 <p>Guassian Mixture Model is a soft algorithm. Each point doesnt belong to a single cluster like in K-Means, instead the model calculates the probability of that data point belonging to each of the clusters. Its a more flexible model than K-Means, and also more expensive in terms of computation.</p>
-<p>I think that, in this case, customers are defined by their activitie, they are retailers or they are restaurants or cafes. W we just need to split them in these clusters, each cluster corresponding to an activitie. So I think that, for start, K-Means is a good model. If results are messy or can´t be interpreted, we can try Gaussian Mixture Model instead.</p>
+<p>I think that, in this case, customers are defined by their activitie, they are retailers or they are restaurants or cafes. W we just need to split them in these clusters, each cluster corresponding to an activitie. So I think that, for start, K-Means is a good model.</p>
 <p>References:
 <a href="https://www.quora.com/What-are-the-advantages-of-K-Means-clustering">https://www.quora.com/What-are-the-advantages-of-K-Means-clustering</a></p>
 
@@ -21035,9 +20947,7 @@ K-Means is a simple and fast algorithm that reduces the data to the nearest cent
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>centers:
 [[ 1.49093664 -0.10743169]
@@ -21112,9 +21022,7 @@ Score for k=2:
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -21785,9 +21693,7 @@ AElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[  8866.53752613   1896.60679852   2476.59086525   2088.23564999
      293.89989089    681.28963817]
@@ -21797,9 +21703,7 @@ AElFTkSuQmCC
 </div>
 </div>
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -21923,9 +21827,7 @@ Delicatessen: 1524.8</p>
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sample point 0 predicted to be in Cluster 1
 Sample point 1 predicted to be in Cluster 1
@@ -22046,9 +21948,7 @@ Knowing the results from clustering, we can now tell what segment a customer bel
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -22729,8 +22629,4 @@ Once we defined only two customer segments (clusters), these classifications are
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
