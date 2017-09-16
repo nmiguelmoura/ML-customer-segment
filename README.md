@@ -1,6 +1,10 @@
 # Content: Unsupervised Learning
 ## Project: Creating Customer Segments
 
+This project is an exercise from MLND from Udacity.
+
+This particular branch implements Gaussian Mixture Model to cluster data, instead of K-Menas from Master branch.
+
 ### Install
 
 This project is an exercise from MLND from Udacity.
